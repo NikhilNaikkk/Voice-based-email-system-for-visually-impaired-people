@@ -1,0 +1,53 @@
+
+Pybot:
+    BoxLayout:
+        orientation:'vertical'
+        MDToolbar:
+            title:'PYBOT'
+            md_bg_color: .2, .2, .2, 1
+            specific_text_color: 1, 1, 1, 1
+
+        MDBottomNavigation:
+            panel_color:.2, .2, .2, 1
+
+            MDBottomNavigationItem:
+                name:'screen 1'
+                text:'Home'
+                icon:'home'
+
+                Image:
+                    id: imageView
+                    source:'bot.png'
+
+            MDBottomNavigationItem:
+                name:'screen 2'
+                text:'pybot'
+                icon:'baby-face'
+
+                TwoLineAvatarListItem:
+                    text: "PyBot Bot"
+                    secondary_text: "pybott11@gmail.com"
+
+                    ImageLeftWidget:
+                        source: 'iconn.png'
+
+                MDScreen:
+
+                    MDRectangleFlatIconButton:
+                        icon: "baby-face"
+                        text: "START"
+                        pos_hint: {'center_x': .5, 'center_y': .5}
+                        text_color: 0, 0, 1, 1
+                        line_color: 0, 0, 1, 1
+                        icon_color: 0, 0, 1, 1
+                        on_release : root.analyze_user()
+
+            MDBottomNavigationItem:
+                name:'screen 3'
+                text:'About'
+                icon:'information'
+
+                MDLabel:
+                    text: 'Currently in the industry, communication is the most important element to move towards progress. As the world is moving fast towards digitization, so are the means of communication. Emails, video calls, phone calls, texts messages, social media etc. are an integral part in this tech-savvy world for conveying messages. Unfortunately, visually challenged people cannot make use of these technologies; hence this project is made for them. Voice based email apps make use of technologies such as Speech to Text and Text to Speech. Most of these apps use functions such as acoustic-based speech recognition, conversion from text signals to speech, and from speech to text signals, language translation amongst various others.'
+                    halign:'center'
+                    color: 0, 0, 1, 1
